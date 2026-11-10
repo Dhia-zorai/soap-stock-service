@@ -11,5 +11,6 @@ public class ServerMain {
         String url = "http://localhost:8080/ws/stock";
         System.out.println("Lancement du serveur sur : " + url);
         Endpoint.publish(url, new StockServiceImpl());
+        System.out.println("Le contrat WSDL est disponible à l'adresse : " + url + "?wsdl");
     }
 }

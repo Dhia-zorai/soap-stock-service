@@ -1,12 +1,14 @@
 package com.tp.soap.service;
 
 import com.tp.soap.model.Produit;
+import jakarta.jws.HandlerChain;
 import jakarta.jws.WebService;
 
 @WebService(
         endpointInterface = "com.tp.soap.service.StockService",
         serviceName = "StockService"
 )
+@HandlerChain(file = "handler-chain.xml")
 public class StockServiceImpl implements StockService {
 
     @Override
